@@ -1276,6 +1276,7 @@ img {
 .hero-main-img {
     border-radius: 30px; 
     width: 100%; 
+    height: auto;
     max-width: 500px; 
     box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
@@ -1294,8 +1295,8 @@ img {
     gap: 10px;
 }
 @media (max-width: 768px) {
-    .badge-left { left: 10px; bottom: 10px; padding: 10px; }
-    .badge-right { top: -20px; right: 0; width: 80px; height: 80px; }
+    .badge-left { left: 5px; bottom: 5px; padding: 10px; transform: scale(0.85); transform-origin: bottom left; }
+    .badge-right { top: -10px; right: 0; width: 60px; height: 60px; transform: scale(0.8); transform-origin: top right; }
     .wavy-text { font-size: 1rem; }
 }
 .badge-subtitle {
