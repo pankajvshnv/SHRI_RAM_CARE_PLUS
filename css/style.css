@@ -496,6 +496,7 @@ img {
     .hero {
         height: auto;
         min-height: auto;
+        max-height: none;
         padding-bottom: 0px;
     }
 
@@ -1423,7 +1424,10 @@ img {
     
     .float-btn {
         width: 50%;
-        height: 70px;
+        height: auto;
+        min-height: 70px;
+        padding: 10px 0;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
         border-radius: 0;
         flex-direction: column;
         box-shadow: none;
