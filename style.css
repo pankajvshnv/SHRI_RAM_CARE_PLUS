@@ -1378,10 +1378,14 @@ img {
 .wavy-track {
     display: inline-flex;
     white-space: nowrap;
-    animation: scrollText 28s linear infinite;
+    animation: scrollText 65s linear infinite;
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+.wavy-track:hover {
+    animation-play-state: paused;
 }
 
 .wavy-track span {
