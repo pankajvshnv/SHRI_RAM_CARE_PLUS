@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Ensure search engines and Googlebot-Image can access all assets and icons
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /favicon-96x96.png
+Allow: /apple-touch-icon.png
+Allow: /favicon/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+Sitemap: https://www.shriramcareplus.com/sitemap.xml
