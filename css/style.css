@@ -1054,17 +1054,37 @@ img {
 }
 
 .footer-bottom {
-    background-color: #111;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: transparent;
+    padding: 25px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-bottom p a {
+    color: var(--primary-light);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.footer-bottom p a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .footer-legal a {
     margin-left: 20px;
+    color: #a0a0a0;
+    font-size: 0.9rem;
 }
 
 .footer-legal a:hover {
@@ -1205,9 +1225,15 @@ img {
 
     .footer-bottom {
         flex-direction: column;
-        gap: 15px;
-        padding-bottom: 80px;
-        /* Space for floating buttons */
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .footer-legal a {
+        margin: 0 10px;
     }
 
     .services-grid {

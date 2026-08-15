@@ -496,6 +496,7 @@ img {
     .hero {
         height: auto;
         min-height: auto;
+        max-height: none;
         padding-bottom: 0px;
     }
 
@@ -532,7 +533,9 @@ img {
     }
 
     .hero-image-col {
+        align-self: center;
         margin-top: 50px;
+        margin-bottom: 50px;
         width: 100%;
     }
 
@@ -1051,17 +1054,37 @@ img {
 }
 
 .footer-bottom {
-    background-color: #111;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: transparent;
+    padding: 25px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-bottom p a {
+    color: var(--primary-light);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.footer-bottom p a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 .footer-legal a {
     margin-left: 20px;
+    color: #a0a0a0;
+    font-size: 0.9rem;
 }
 
 .footer-legal a:hover {
@@ -1202,9 +1225,15 @@ img {
 
     .footer-bottom {
         flex-direction: column;
-        gap: 15px;
-        padding-bottom: 80px;
-        /* Space for floating buttons */
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .footer-legal a {
+        margin: 0 10px;
     }
 
     .services-grid {
@@ -1276,6 +1305,7 @@ img {
 .hero-main-img {
     border-radius: 30px; 
     width: 100%; 
+    height: auto;
     max-width: 500px; 
     box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
@@ -1294,8 +1324,8 @@ img {
     gap: 10px;
 }
 @media (max-width: 768px) {
-    .badge-left { left: 10px; bottom: 10px; padding: 10px; }
-    .badge-right { top: -20px; right: 0; width: 80px; height: 80px; }
+    .badge-left { left: -10px; bottom: -20px; padding: 10px; transform: scale(0.7); transform-origin: bottom left; }
+    .badge-right { top: -20px; right: -10px; width: 60px; height: 60px; transform: scale(0.7); transform-origin: top right; }
     .wavy-text { font-size: 1rem; }
 }
 .badge-subtitle {
@@ -1420,7 +1450,10 @@ img {
     
     .float-btn {
         width: 50%;
-        height: 70px;
+        height: auto;
+        min-height: 70px;
+        padding: 10px 0;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom));
         border-radius: 0;
         flex-direction: column;
         box-shadow: none;
